@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Page</class>
+        <file_name>directory</file_name>
+        <name>Directory</name>
+        <url>/directory</url>
+        <title>Provider Directory</title>
+        <description>null</description>
+        <keywords>null</keywords>
+        <sort_order>null</sort_order>
+        <published>1</published>
+        <action_code>bluebell:directory</action_code>
+        <security_id>everyone</security_id>
+        <unique_id>4fed9ac893cb04.02841985</unique_id>
+        <relation_template>4f670f15565f26.27069914</relation_template>
+    </object>
+</data>

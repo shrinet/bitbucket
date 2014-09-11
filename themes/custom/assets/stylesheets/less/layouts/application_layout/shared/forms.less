@@ -1,0 +1,60 @@
+@import "../../../shared/base";
+
+.control-group {
+	span.validate-text { 
+		position: relative; 
+		top: -5px; 
+		margin-top: -5px;
+	}
+
+	&.error {
+		textarea,
+		input[type="text"],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="color"] {
+			background: url('../../../../../images/icons/warning.png') 99% 50% no-repeat;
+		}
+		textarea { background-position: 99% 5px; }
+	}
+
+	&.success {
+		textarea,
+		input[type="text"],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="color"] {
+			background: url('../../../../../images/icons/tick.png') 99% 50% no-repeat;
+		}
+		textarea { background-position: 99% 10px; }
+		span.validate-text { display: none !important; }
+	}
+}
+
+.form-horizontal {
+	span.validate-text { 
+		top: 5px;
+		left: 20px;
+		width: 95%; // To accomodate the 20px above
+	}
+}

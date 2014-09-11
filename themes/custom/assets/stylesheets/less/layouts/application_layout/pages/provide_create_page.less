@@ -1,0 +1,53 @@
+@import "../../../shared/base";
+
+body.provide-create-page {    
+	
+	h4 a { font-size: 12px; }
+
+	#link_work_hours, #link_apply_all { margin-left:0.5em; }
+	#p_work_hours_form {
+		select {
+			display:inline-block;
+		}
+		
+		div.row { padding-bottom:0.1em; padding-top:0.1em; line-height:23px; }
+		div.hide { font-style:italic; }
+		div.day_column {            
+			font-weight:bold;
+		}
+	}
+
+	#p_work_radius_form {
+		position:relative;
+		label { font-weight:bold; }
+		#work_radius_radius { float:right; }
+		.radius_slider {
+			#work_radius_slider { margin:0 1em; }
+			#work_radius_slider_legend {
+				margin:0; padding:0.5em 0 0 0;
+				li { list-style:none; float:left; width:9.5%; text-align:center; }
+				li.first { width:5%; margin-left:2%; text-align:left; }
+				li.last { text-align:center; float:right; width:5%; }
+			}
+		}
+		#work_radius_map { width:100%; height:300px; }
+		#work_radius_area_list { 
+			margin:0; padding:5px; 
+			border:1px solid @borderColor; 
+			height:300px; 
+			overflow:auto; 
+			li { list-style:none; }
+		}
+		
+		#work_radius.disabled { .opacity(35); }
+		#work_radius_disabled { 
+			.pos-tl(0,150); 
+			left:50%; 
+			margin-left:-150px; 
+			padding: 2em; 
+			width:300px; 
+			text-align:center; 
+			font-weight:bold; 
+		}
+	}
+}

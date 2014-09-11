@@ -1,0 +1,37 @@
+<?
+	$states = $form_model->get_all_deferred('states', $this->form_get_edit_session_key());
+?>
+<table class="table list-table">
+	<thead>
+		<tr>
+			<th>Code</th>
+			<th class="<?= !$states->count ? 'last' : null ?>">Name</th>
+			<? if ($states->count): ?>
+				<th class="list-icon last">&nbsp;</th>
+			<? endif ?>
+		</tr>
+	</thead>
+
+	<tbody>
+		<? if (!$states->count): ?>
+			<tr class="no-data">
+				<td colspan="3" class="last">There are no states defined.</td>
+			</tr>
+		<? else: ?>
+			<? foreach ($states as $state):
+				$on_click = "$('#state_id').val('".$state->id."'); new PopupForm('on_load_country_state_form', { ajaxFields: $('#state_id').getForm() }); return false;";
+			?>
+				<tr class="<?= Phpr_Html::zebra('state') ?>">
+					<td class="link" onclick="<?= $on_click ?>"><a href="javascript:;" onclick="<?= $on_click ?>"><?= h($state->display_field('code', 'list')) ?></a></td>
+					<td class="link" onclick="<?= $on_click ?>"><a href="javascript:;" onclick="<?= $on_click ?>"><?= h($state->name) ?></a></td>
+					<td class="list-icon last"><a href="javascript:;" onclick="$('#state_id').val('<?= $state->id ?>'); return $(this).phpr().post('on_delete_country_state', { 
+						confirm: 'Do you really want to delete this state?', 
+						update: '#state_list', 
+						loadIndicator: { show: false }, 
+						error: function(request){ alert(request.errorMessage); } 
+					}).send();" title="Delete state" class="icon delete has-tooltip"><i class="icon-remove"></i></a></td>
+				</tr>
+			<? endforeach ?>
+		<? endif ?>
+	</tbody>
+</table>

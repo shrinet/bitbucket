@@ -1,0 +1,46 @@
+// Customise buttons
+//
+
+// Core
+.btn {
+	font-family: @btnFont;
+	font-weight: @btnWeight;
+}
+
+.btn,
+.btn-large,
+.btn-small,
+.btn-mini,
+.btn-group > .btn:first-child,
+.btn-group > .btn:last-child,
+.btn-group > .dropdown-toggle,
+.btn-group > .btn.large:first-child,
+.btn-group > .btn.large:last-child,
+.btn-group > .large.dropdown-toggle,
+.btn-group-vertical .btn:first-child,
+.btn-group-vertical .btn:last-child,
+.btn-group-vertical .btn-large:first-child,
+.btn-group-vertical .btn-large:last-child {
+	.border-radius(0);
+}
+
+.btn,
+.btn-group.open .dropdown-toggle,
+.btn-group > .btn + .dropdown-toggle,
+.btn-group.open .btn.dropdown-toggle {
+	.no-background-image();
+	.box-shadow(~"0 -2px 0 rgba(0,0,0,0.2) inset,0 0 1px rgba(0,0,0,0.1)");
+}
+
+.btn-link,
+.btn-mini,
+.input-append .add-on:last-child, 
+.input-append .btn:last-child, 
+.input-append .btn-group:last-child > .dropdown-toggle {
+	.box-shadow(none);
+}
+
+.btn-xlarge {
+	padding: 15px 25px;
+	font-size: 22.5px;
+}

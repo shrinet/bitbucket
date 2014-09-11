@@ -1,0 +1,39 @@
+<? Admin_Breadcrumb::add('Service', 'service/requests')->add($this->app_page_title);?>
+<? Phpr_View::begin_block("head") ?>
+	<script type="text/javascript" src="modules/service/assets/scripts/js/request.js"></script>
+<? Phpr_View::end_block() ?>
+<? Phpr_View::begin_block("view") ?>
+
+	<?=flash()?>
+
+	<? if (!isset($fatal_error)): ?>
+		<div class="form-fluid">
+			<?= form_open(array('id'=>'form-element')) ?>
+
+				<? $this->form_render() ?>
+				
+				<div id="fixed-toolbar" class="top">
+					<div class="form-toolbar">
+
+						<?= admin_ajax_button('Save', $this->get_event_handler('on_save'), array('class'=>'btn-success'),
+							"beforeSend: function(){phprTriggerSave();},
+							data: { redirect: 0 },
+							customIndicator: LightLoadingIndicator")
+						?>
+						<?= admin_ajax_button('Save and Close', $this->get_event_handler('on_save'), array('class'=>'btn-primary'),
+							"beforeSend: function(){phprTriggerSave();}"
+						) ?>
+						<?= admin_ajax_button('Cancel', $this->get_event_handler('on_cancel'), array('class'=>'')) ?>
+
+						<?= admin_ajax_button('Delete', $this->get_event_handler('on_delete'), array('class'=>"btn-danger pull-right"),
+							"confirm: 'Do you really want to delete this request?'"
+						) ?>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	<? else: ?>
+		<p><a href="<?= url('service/requests') ?>">Return to the list of Requests</a></p>
+	<? endif ?>
+<? Phpr_View::end_block() ?>

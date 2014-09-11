@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Page</class>
+        <file_name>how_it_works_homeowner</file_name>
+        <name>How it Works HomeOwner</name>
+        <url>/how-it-works-homeowner</url>
+        <title>How it Works</title>
+        <description>null</description>
+        <keywords>null</keywords>
+        <sort_order>null</sort_order>
+        <published>1</published>
+        <action_code>Custom</action_code>
+        <security_id>everyone</security_id>
+        <unique_id>53e4ae4f83e147.89671786</unique_id>
+        <relation_template>53e134949a8471.36960487</relation_template>
+    </object>
+</data>

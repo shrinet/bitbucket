@@ -1,0 +1,68 @@
+<?=flash()?>
+
+<? if (!$fees->count): ?>
+    <p class="no-data">No fees found</p>
+<? else: ?>
+    <ul class="fee_list" id="fee_list">
+        <? 
+            $last_index = $fees->count-1;
+            $prev_is_terminating = false;
+            foreach ($fees as $index=>$fee): 
+                $classes = array();
+                if ($index == $last_index)
+                    $classes[] = 'last';
+
+                if ($index == 0)
+                    $classes[] = 'first';
+
+                if (!$fee->enabled)
+                    $classes[] = 'inactive';
+
+                $collapsed = $this->fees_get_collapse_status($fee);
+                if ($collapsed)
+                    $classes[] = 'collapsed';
+
+                $user_groups = $fee->column_value('user_groups');
+                if (!strlen($user_groups))
+                    $user_groups = 'All';
+            ?>
+            <li class="fee <?=implode(' ', $classes) ?>" style="z-index: <?=1000+$last_index-$index ?>">
+                <div class="fee_content_container">
+                    <div class="drag_handle" title="Reorder fees"></div>
+                    <div class="top_connector"></div>
+
+                    <h4 class="fee_header">
+                        <a href="<?=url('payment/fees/edit/'.$fee->id) ?>"><?=h($fee->name) ?></a>
+                        <a class="fee_collapse_control" href="javascript:;" onclick="return fee_toggle(this, '<?=$fee->id ?>')">Collapse/Expand</a>
+                        <a title="Delete fee" class="fee_delete_icon" href="javascript:;" onclick="return fee_delete(this, '<?=$fee->id ?>')">Delete</a>
+                    </h4>
+                    <? if ($fee->description): ?>
+                        <div class="fee_description">
+                            <p><?=h($fee->description) ?></p>
+                        </div>
+                    <? endif ?>
+
+                    <div class="fee_info">
+                        <p>                            
+                            <?= $fee->enabled ? 'Enabled' : 'Disabled' ?> 
+                            &bull; User groups: <?=$user_groups ?>
+                            <? if ($fee->date_start): ?>
+                                &bull; Starts: <?=$fee->column_value('date_start') ?>
+                            <? endif ?>
+                            <? if ($fee->date_end): ?>
+                                &bull; Ends: <?=$fee->column_value('date_end') ?>
+                            <? endif ?>
+                        </p>
+                    </div>
+
+                    <div class="bottom_connector"></div>
+
+                    <input class="fee_id" value="<?=$fee->id?>" type="hidden"/>
+                    <input class="fee_order" value="<?=$fee->sort_order ?>" type="hidden"/>
+                </div>
+            </li>
+        <? 
+            $prev_is_terminating = $fee->terminating;
+            endforeach ?>
+    </ul>
+<? endif ?>

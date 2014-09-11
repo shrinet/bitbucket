@@ -1,0 +1,123 @@
+/*!
+ * Foundationstrap v1.0.0
+ *
+ * Copyright 2013 Responsiv, Inc.
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with love.
+ *
+ * References: 
+ *   Bootstrap customization best practices - http://stackoverflow.com/questions/10451317/twitter-bootstrap-customization-best-practices
+ */
+
+// Core variables and mixins
+@import "../bootstrap/less/variables";
+@import "variables";
+@import "../../../stylesheets/less/shared/variables";
+@import "../bootstrap/less/mixins";
+@import "mixins";
+
+// CSS Reset
+@import "../bootstrap/less/reset";
+
+// Grid system and page structure
+@import "../bootstrap/less/scaffolding";
+@import "../bootstrap/less/grid";
+@import "../bootstrap/less/layouts";
+
+// Base CSS
+@import "../bootstrap/less/type";
+@import "type";
+@import "../bootstrap/less/code";
+@import "code";
+@import "../bootstrap/less/forms";
+@import "forms";
+@import "../bootstrap/less/tables";
+@import "tables";
+
+// Components: common
+@import "../bootstrap/less/sprites";
+@import "../bootstrap/less/dropdowns";
+@import "dropdowns";
+@import "../bootstrap/less/wells";
+@import "wells";
+@import "../bootstrap/less/component-animations";
+@import "../bootstrap/less/close";
+
+// Components: Buttons & Alerts
+@import "../bootstrap/less/buttons";
+@import "../bootstrap/less/button-groups";
+@import "buttons";
+@import "../bootstrap/less/alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons
+@import "alerts";
+
+// Components: Nav
+@import "../bootstrap/less/navs";
+@import "navs";
+@import "../bootstrap/less/navbar";
+@import "navbar";
+@import "../bootstrap/less/breadcrumbs";
+@import "breadcrumbs";
+@import "../bootstrap/less/pagination";
+@import "pagination";
+@import "../bootstrap/less/pager";
+@import "pager";
+
+// Components: Popovers
+@import "../bootstrap/less/modals";
+@import "modals";
+@import "../bootstrap/less/tooltip";
+@import "tooltip";
+@import "../bootstrap/less/popovers";
+@import "popovers";
+
+// Components: Misc
+@import "../bootstrap/less/thumbnails";
+@import "../bootstrap/less/media";
+@import "../bootstrap/less/labels-badges";
+@import "labels";
+@import "../bootstrap/less/progress-bars";
+@import "progress-bars";
+@import "../bootstrap/less/accordion";
+@import "accordion";
+@import "../bootstrap/less/carousel";
+@import "carousel";
+@import "../bootstrap/less/hero-unit";
+@import "hero-unit";
+@import "lists";
+
+// UTILITY CLASSES
+// ------------------
+
+@import "../bootstrap/less/utilities"; // Has to be last to override when necessary
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "../bootstrap/less/responsive-utilities";
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+@import "../bootstrap/less/responsive-1200px-min";
+
+// Tablets to regular desktops
+@import "../bootstrap/less/responsive-768px-979px";
+
+// Phones to portrait tablets and narrow desktops
+@import "../bootstrap/less/responsive-767px-max";
+
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+@import "../bootstrap/less/responsive-navbar";
+
+@import "responsive";
+
+// RESET (UN-FLUFFIFY BOOTSTRAP)
+// ------------------
+@import "reset";

@@ -1,0 +1,179 @@
+@import "../../../shared/base";
+
+body.request-manage-page {
+	p.small, a.small { font-size: 14px; }
+	.inner_panel { padding: 1.5em; border:1px solid @borderColor; margin:1.5em 0 0 0; }
+
+	div.page-header {
+		margin-top:0; padding-top:0;
+		h1 { font-size: 32px; }
+	}
+
+	#p_status_panel {
+		.box-header .block-grid { margin:0; }
+		.box-header .block-grid > li { padding:0; line-height:26px; }
+		h6 { line-height:26px; } 
+	}
+
+	.request_cancel {
+		text-align: right;
+		font-size: 12px;
+		position:relative;
+		top:-1em;
+	}
+
+	#p_details {
+		padding-bottom:0.5em;
+		h5 { margin:0; }
+		h5 { margin-bottom:0.1em; }
+		p { color:@grayDark; }
+		.request_description p, .added_info p, .request_time p, .request_location p { font-size: 14px; }
+	}
+	
+	#panel_photos {
+		width:550px;
+		min-height:90px;
+		.clearfix;
+		padding-bottom: 0;
+		padding-left: 0;
+		ul { margin-bottom: 0; }
+		li { 
+			text-align:center;
+			background: @white;
+			div.thumbnail { 
+				position:relative; 
+				min-height:75px; 
+				min-width:75px; 
+				&.loading { 
+					width:100px; 
+					height:75px; 
+					background: @white url('../../../../../images/ajax_loading.gif') 50% 50% no-repeat; 
+				}
+				a.remove { 
+					.hide-text;
+					.pos-tr(0, 0); 
+					background-image: url('../../../../../images/icons/close.png');
+					width:16px; 
+					height:16px; 
+					display:none; 
+				}
+				&:hover a.remove { display:block; }
+			}
+		}
+	}
+
+	#form_add_photos {
+		#input_add_photos { position:absolute; visibility:hidden; }
+		#link_add_photos { background: url('../../../../../images/icons/attach.png') no-repeat; padding-left: 20px; }
+		p,span { font-size: 14px; }
+	}
+
+	#link_add_description { background: url('../../../../../images/icons/add.png') no-repeat; padding-left: 20px; }
+	#link_add_description.remove { background-image: url('../../../../../images/icons/remove.png'); }
+	#panel_add_description textarea { height:100px; }
+	#link_add_description_cancel { font-size: 11px; padding-left:0.5em; }
+
+	#p_questions {
+		.answer_form {
+			border:1px solid @borderColor;
+			padding:1em 1em 0 1em;
+			margin-bottom:1em;
+			h6 { margin-bottom:5px; }
+			textarea { height:75px; max-width:100%; min-width:100%; }
+			.author, .terms { padding-bottom:0.5em; }
+			.author { color:@gray; font-size: 12px; }
+			.terms { font-size: 12px; font-style:italic; display:inline-block; margin-left:0.5em; }
+			p { font-size: 14px; margin-bottom:0; }
+			.controls { font-size: 11px; text-align:right; }
+		}
+	}
+
+	#p_quotes {
+		.quote_list ul {
+			margin:0;
+			li {
+				list-style:none;
+				cursor:pointer;
+				margin:0;
+				padding:0;
+				width:100%;
+				height:80px;
+				.quote_item { padding:15px 0 15px 15px; }
+				position:relative;
+				.price {
+					.pos-tr(10,15);
+					span { font-size: 8px; position:relative; top:-5px; }
+				}
+				.consult {
+					.pos-tr(22,19);
+					font-size: 11px;
+					font-weight: italic;
+				}
+				&.active {
+					cursor:default;
+					background: url('../../../../../images/select_bg.png') 100% 50% no-repeat;
+					border-left:1px solid #ccc; 
+					.quote_item { 
+						width:100%; 
+						padding-right:0; 
+					}
+					padding-right:33px;
+					.price { .pos-tr(25,15); }
+				}
+				.icons {
+					span { display:block; float:left; margin:2px; width:16px; height:16px; }
+					.chat { .hide-text; background: url('../../../../../images/icons/chat.png') no-repeat 0 0; }
+					.note { .hide-text; background: url('../../../../../images/icons/note.png') no-repeat 0 0; }
+				}
+			}
+
+		}
+		.quote_panel {
+			.price {
+				color:@grayDark;
+				font-size: 32px;
+				span { font-size: 14px; position:relative; top:-12px; left:3px; }
+			}
+			.price_summary { padding-top:3px; }
+			.price_terms { font-style:italic; }
+			.price_summary, .price_terms { font-size: 12px; color:@grayDark; line-height:1.4; }
+			.logo { margin-bottom:0.5em; }
+			h3 { margin-bottom:0.5em; }
+			.location { margin-bottom:1em; }            
+			p { font-size: 12px; }
+			.booking_time { 
+				color:@grayDark; padding:1em 0; font-weight:bold; line-height:1.6; 
+				a { font-size: 12px; }
+			}
+
+			.form_booking_time {
+				margin-bottom:0;
+				.select_booking_time_time { float:left; }
+				.field_booking_time_date { margin-left:110px; }
+			}
+
+			.summary { padding-top:1em; }
+			.box-footer p.info { padding-top:1em; font-style:italic; }
+			.box-footer p.terms { padding-top:0; font-style:italic; }
+
+			.star-rating {
+				&.overall { 
+					padding-top:1em;
+					span { margin-left:1em; }
+				}
+				&.single { display:inline-block; position:relative; top:-3px; padding:0; margin:0; left:5px; }
+			}
+
+		}
+	}
+
+	.quote_popup {
+		.quote_details { 
+			p.detail { font-weight:bold; font-size: 14px; }
+		}
+		.customer_details {
+			input, select { margin-bottom:1em; }
+		}
+		.terms { padding-top:0; font-style:italic !important; }
+	}	
+}

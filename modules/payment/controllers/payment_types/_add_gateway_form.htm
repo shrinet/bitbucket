@@ -1,0 +1,45 @@
+<div>
+	<h2>Add Payment Method</h2>
+	<div class="form-400">
+		<?=Phpr_Form::open_tag() ?>
+			<? if (!isset($fatal_error)): ?>
+				<div class="content">
+					<div class="scrollable-list thickBorder height-400">
+						<ul class="selectable-list">
+						<?
+							$last_index = count($type_list)-1;
+						?>
+						<? foreach ($type_list as $index=>$info): ?>
+							<?
+								$name = $info['name'];
+								$description = isset($info['description']) ? $info['description'] : null;
+								$url = url('payment/types/create/'.$info['class_name']);
+							?>
+							<li class="<?=($index == $last_index)?'last':''?>">
+								<a href="<?=$url ?>">
+									<span class="title"><?=h($name) ?></span>
+									<? if ($description): ?>
+										<span class="description">
+											<?=h($description) ?>
+										</span>
+									<? endif ?>
+								</a>
+							</li>
+						<? endforeach ?>
+						</ul>
+					</div>
+				</div>
+				<div class="footer">
+					<?=admin_button('Cancel', array('onclick'=>'return cancelPopup()')) ?>
+				</div>
+			<? else: ?>
+				<div class="content">
+					<?=flash()?>
+				</div>
+				<div class="footer">
+					<?=admin_button('Cancel', array('onclick'=>'return cancelPopup()')) ?>
+				</div>
+			<? endif ?>
+		</form>
+	</div>
+</div>

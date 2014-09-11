@@ -1,0 +1,12 @@
+#1|1.0.1  First version of Payment Module.
+#2|1.0.2  Add invoice tables.
+#3|1.0.3  Add payment fee structures.
+#4|1.0.4  Add tax classes.
+#5|1.0.5  Implement user credit system.
+#6|1.0.6  Add logging for payment attempts.
+#7|1.0.7  Add support for multiple payment methods.
+#8|1.0.8  Add Moneybookers gateway.
+#9|1.0.9  Fixes to Fees Event and Action selection.
+#10|1.0.10 Refactor to meet latest framework changes.
+#11|1.0.11 Fixes bug with 2Checkout payment method.
+#12|1.0.12 Fixes bug with Skrill payment method.

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Content_Block</class>
+        <file_name>provider_why_us</file_name>
+        <name>Why use us</name>
+        <code>provider_why_us</code>
+        <relation_page>4f794284837740.63490800</relation_page>
+    </object>
+</data>

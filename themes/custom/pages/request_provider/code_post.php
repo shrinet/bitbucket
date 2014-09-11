@@ -1,0 +1,5 @@
+<?
+if (!$request)
+    return;
+
+?>

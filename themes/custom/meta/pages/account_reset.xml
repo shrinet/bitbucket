@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Page</class>
+        <file_name>account_reset</file_name>
+        <name>Reset Password</name>
+        <url>/account/reset</url>
+        <title>Forgot your password?</title>
+        <description>null</description>
+        <keywords>null</keywords>
+        <sort_order>null</sort_order>
+        <published>1</published>
+        <action_code>user:reset_password</action_code>
+        <security_id>guests</security_id>
+        <unique_id>4f72ad706021d9.68655677</unique_id>
+        <relation_template>4f670f15565f26.27069914</relation_template>
+        <relation_parent>4f792ee75c2481.67961677</relation_parent>
+        <relation_security_redirect>4f739ac4748779.55959719</relation_security_redirect>
+    </object>
+</data>

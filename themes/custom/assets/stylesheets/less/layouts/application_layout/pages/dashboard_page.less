@@ -1,0 +1,69 @@
+@import "../../../shared/base";
+
+body.dashboard-page {
+	
+	h3 { margin-bottom:1em; }
+
+	.welcome-section .content {
+		padding-top:2.5em;
+		label { 
+			font-size: 16px; 
+			font-weight:bold; 
+			display:block; 
+			padding-top:0.3em; 
+		}
+		.small { font-size: 13px; }
+	}
+	
+	#p_dash_welcome {        
+		.welcome_icons { 
+			margin-bottom:0;
+			text-align: center;
+			.link-button { text-align: center; }
+		}
+		i { 
+			margin:5px 0 0 0;
+			height:70px; 
+			line-height:70px; 
+			padding:5px 0;
+			.opacity(65);
+			font-size: 42px;
+		}
+		a:hover {
+			text-decoration: none;
+			i.icon {
+			.opacity(75);
+			}
+		}
+		.box-content { padding:0.5em; }
+		.avatar { 
+			text-align: center; 
+		}
+		.business_name { 
+			padding-left: 0.5em;
+			p { margin:0; }
+			p.name { margin-top:.5em; font-size: 16px; }
+			p.title { margin-bottom: .5em; }
+			p.location { margin:0; }
+		}
+	} 
+
+	#p_offers, #p_requests {
+		.request_max_bids {
+			text-align: right;
+		}
+		.block-grid {
+			margin-bottom:0;
+		}
+		.box-content {
+			padding-bottom:1.5em;
+		}
+		.box-footer {
+			padding-top:0.2em; 
+			padding-bottom:0.4em;
+			a { font-size: 11px; color:@quietColor; }
+			a:hover { color:@linkColorHover; }
+		}
+	}
+
+}

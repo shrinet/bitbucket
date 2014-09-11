@@ -1,0 +1,19 @@
+<? Admin_Breadcrumb::add('Tax Classes', 'payment/taxes')->add($this->app_page_title);?>
+<? Phpr_View::begin_block("view") ?>
+    <?=flash()?>
+
+    <? if (!isset($fatal_error)): ?>
+        <?=Phpr_Form::open_tag() ?>
+            <? $this->form_render() ?>
+
+            <div id="fixed-toolbar" class="top">
+                <div class="form-toolbar">
+                    <?=admin_ajax_button('Save', 'create_on_save', array('class'=>'btn-success')) ?>
+                    <?=admin_ajax_button('Cancel', 'create_on_cancel') ?>
+                </div>
+            </div>                    
+        </form>
+    <? else: ?>
+        <p><a href="<?= url('payment/taxes') ?>">Return to the tax classes list</a></p>
+    <? endif ?>
+<? Phpr_View::end_block() ?>

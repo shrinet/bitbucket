@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Template</class>
+        <file_name>response</file_name>
+        <name>response</name>
+        <is_default>null</is_default>
+        <unique_id>540a57df9b93d1.23793046</unique_id>
+    </object>
+</data>

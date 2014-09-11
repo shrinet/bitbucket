@@ -1,0 +1,41 @@
+<div>
+	<h2>Add Providers</h2>
+	<div class="form-500">
+		<?=Phpr_Form::open_tag(array('id'=>$this->list_get_form_id())) ?>
+			<input type="hidden" name="edit_session_key" value="<?=h($session_key) ?>" />
+			<input type="hidden" name="add_provider_mode" value="1" />
+			
+			<div class="content">
+				<div class="form-flash"></div>
+
+				<div class="embedded-list">
+					<?=$this->list_render(array(
+						'list_name'=>null,
+						'list_model_class'=>'Service_Provider',
+						'list_columns'=>array('business_name'),
+						'list_custom_body_cells'=>PATH_SYSTEM.'/modules/db/behaviors/list_behavior/partials/_list_body_cb.htm',
+						'list_custom_head_cells'=>PATH_SYSTEM.'/modules/db/behaviors/list_behavior/partials/_list_head_cb.htm',
+						'list_custom_prepare_func'=>'prepare_provider_list',
+						'list_record_url'=>null,
+						'list_search_enabled'=>true,
+						'list_no_setup_link'=>true,
+						'list_search_fields'=> array('@business_name'),
+						'list_search_prompt'=>'find providers by business_name',
+						'list_no_form'=>true,
+						'list_items_per_page'=>10,
+						'list_control_panel'=>null,
+						'list_custom_partial'=>null,
+						'list_no_pagination'=>false
+					)) ?>
+				</div>
+			</div>
+			<div class="footer">
+				<?=admin_ajax_button('Add', 'on_add_providers', array('class'=>'btn btn-success'), "
+					loadIndicator: { show: true, hideOnSuccess: true, injectInElement: true },
+					success: updateProviderList
+				") ?>
+				<?=admin_button('Close', array('onclick'=>'return cancelPopup()')) ?>
+			</div>
+		</form>
+	</div>
+</div>

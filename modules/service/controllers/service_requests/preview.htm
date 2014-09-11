@@ -1,0 +1,35 @@
+<? Admin_Breadcrumb::add('Service', 'service/requests')->add($this->app_page_title);?>
+<? Phpr_View::begin_block("view") ?>
+
+	<? if (!isset($fatal_error)): ?>
+		<div class="scoreboard-report">
+			<ul>
+				<li>
+					<p>Status</p>
+					<h3><?= $form_model->status ? $form_model->status->name : 'Unknown' ?></h3>
+				</li>
+				<li class="last">
+					<p>Total Quotes</p>
+					<h3><?= $form_model->total_quotes ?></h3>
+				</li>
+			</ul>
+		</div>
+
+		<div class="form-fluid">
+
+			<? $this->form_render_preview() ?>
+
+			<div id="fixed-toolbar" class="top">
+				<div class="form-toolbar">
+					<?= admin_button('Return to the request list', url('/service/requests')) ?>
+					<?= admin_button('Edit request', array('href'=>url('/service/requests/edit/'.$form_model->id), 'class'=>'btn-success')) ?>
+				</div>
+			</div>
+
+		</div>
+	<? else: ?>
+		<?=flash()?>
+
+		<p><a href="<?= url('service/requests') ?>">Return to the request list</a></p>
+	<? endif ?>
+<? Phpr_View::end_block() ?>

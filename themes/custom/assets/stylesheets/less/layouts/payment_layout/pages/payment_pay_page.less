@@ -1,0 +1,36 @@
+@import "../../../shared/base";
+
+body.payment-pay-page, body.payment-invoice-page {
+
+    .table-invoice { 
+        width:100%; 
+
+        .numeric { text-align: right; }
+        .grand-total td { font-size: 19px; border-top: 3px solid @borderColor; }
+        .item-description { width: 60%; }
+        .blank { border: none !important; }
+    }
+
+    #form_invoice_details {
+        .form-field {
+            min-height:32px;
+            input { margin:0; }
+            label {
+                margin:0;
+                padding:0.4em 0.2em;
+                &:hover { background-color:@shadeColor; }
+                color:lighten(@gray,10%);
+                &.populated { color:@grayDark; }
+            }
+            &.name label { font-weight:bold; font-size: 17px; }
+            &.mobile {
+                position:relative; top:-5px;
+            }
+            &.address {
+                .row { padding:0.5em 0 0 0; }
+                .populated { line-height: 1.6; }
+            }
+        }
+    }
+
+}

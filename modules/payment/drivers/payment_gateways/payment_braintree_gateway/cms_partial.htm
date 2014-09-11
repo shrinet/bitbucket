@@ -1,0 +1,59 @@
+<p>Please provide your credit card information.</p>
+<script src="https://js.braintreegateway.com/v1/braintree.js"></script>
+ <script>
+	  var braintree = Braintree.create("MIIBCgKCAQEAu7+hs/ZQsarQmKl7V4J+gUyPW7sOpkmfAgFgWAl2sZJlfAOo6LWT939WCcIY0M7YY4xnIbRHgCdA3Gwm03BCjIf19ayjfXYs13xoxozMAS/arDnMEeUkWCF6cFewitqBTjEwTcuAUy2zRvFWvareosBfEoT43OIky6SjqaB4ulew1i/8aw5/WYKmqG/ieB/BgRVPW+mY4X3vmOM3RXNFoXFxrh4FPYBlyBN1WkiaXb60pdstRft8Dt39/y0j5f3DUze37Kz8aQiUZyMsuiD7rUHSSFe82RS4tI2TaJNHQCVAXXzhGA01XB0JbX0iDNuTCoNAsXoMFETiD8JXj/Tb/QIDAQAB");
+      braintree.onSubmitEncryptForm('braintree-payment-form');
+  </script>
+<?= form_open(array('id' => 'braintree-payment-form')) ?>
+	<?= flash_message() ?>
+	<div class="row-fluid">
+		<ul class="form braintreeForm">
+			<li class="field text fName">
+				<label for="FIRSTNAME">Cardholder First Name</label>
+				<div><input autocomplete="off" name="FIRSTNAME" value="" id="FIRSTNAME" type="text" class="text"/></div>
+			</li>		
+			
+			<li class="field text lName">
+				<label for="LASTNAME">Cardholder Last Name</label>
+				<div><input autocomplete="off" name="LASTNAME" value="" id="LASTNAME" type="text" class="text"/></div>
+			</li>		
+
+			<li class="field text cNumber">
+				<label for="ACCT">Credit Card Number</label>
+				<div><input autocomplete="off" name="ACCT" value="" id="ACCT" type="text" class="text"/></div>
+			</li>
+			
+			<li class="field select expMonth">
+				<label for="EXPDATE_MONTH">Expiration Date - Month</label>
+				<select autocomplete="off" name="EXPDATE_MONTH" id="EXPDATE_MONTH">
+					<? for ($month=1; $month <= 12; $month++): ?>
+						<option value="<?= $month ?>"><?= $month ?></option>
+					<? endfor ?> 
+				</select>
+			</li>
+
+			<li class="field text expYear">
+				<label for="EXPDATE_YEAR">Expiration Date - Year</label>
+
+				<select autocomplete="off" name="EXPDATE_YEAR" id="EXPDATE_YEAR">
+					<?
+					  $start_year = Phpr_DateTime::now()->get_year();
+					  for ($year=$start_year; $year <= $start_year + 10; $year++): ?>
+						<option value="<?= $year ?>"><?= $year ?></option>
+					<? endfor ?> 
+				</select>
+			</li>
+
+			<li class="field text cvv">
+				<label for="CVV2">
+					CVV2
+					<span class="comment">For MasterCard, Visa, and Discover, the CSC is the last three digits in the signature area on the back of your card. For American Express, it's the four digits on the front of the card.</span>
+				</label>
+				
+				<div><input autocomplete="off" name="CVV2" value="" id="CVV2" type="text" class="text"/></div>
+			</li>
+		</ul>
+	</div>
+
+	<input type="button" onclick="return jQuery(this).phpr().post('payment:on_pay').send()" value="<?= __('Submit Payment') ?>" class="btn" />
+</form>

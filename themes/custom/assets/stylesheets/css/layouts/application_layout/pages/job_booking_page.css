@@ -1,0 +1,135 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.no-border-radius {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.no-box-shadow {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.no-background-image {
+  background-image: none;
+}
+.reset {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  line-height: normal;
+  list-style: none;
+}
+body.job-booking-page .inner_panel {
+  padding: 1.5em;
+  border: 1px solid #dddddd;
+  margin: 1.5em 0 0 0;
+}
+body.job-booking-page div.page_header {
+  margin-top: 0;
+  padding-top: 0;
+}
+body.job-booking-page div.page_header h1 {
+  font-size: 32px;
+}
+body.job-booking-page #p_booking_summary .detail_label {
+  font-weight: bold;
+  font-size: 14px;
+}
+body.job-booking-page #p_booking_summary .detail_text {
+  padding: 0.1em;
+}
+body.job-booking-page #p_booking_summary .detail_price {
+  font-size: 16px;
+}
+body.job-booking-page #p_booking_summary .detail_price_summary,
+body.job-booking-page #p_booking_summary .detail_price_terms {
+  font-size: 12px;
+  display: block;
+  line-height: 1.4;
+  color: #666666;
+}
+body.job-booking-page #p_booking_summary .detail_price_terms {
+  font-style: italic;
+}
+body.job-booking-page #p_booking_summary .map {
+  width: 100%;
+  height: 160px;
+  background: #ffffff;
+  font-style: italic;
+  color: #666666;
+}
+body.job-booking-page #p_booking_summary .address {
+  line-height: 1.6;
+  margin: 0.5em 0;
+  font-size: 13px;
+}
+body.job-booking-page #p_booking_summary .form_booking_time {
+  margin-bottom: 0;
+}
+body.job-booking-page #p_booking_summary .form_booking_time .select_booking_time_time {
+  float: left;
+}
+body.job-booking-page #p_booking_summary .form_booking_time .field_booking_time_date {
+  margin-left: 110px;
+}
+body.job-booking-page #p_job_rating_form textarea {
+  height: 100px;
+}
+body.job-booking-page .panel p {
+  font-size: 13px;
+}
+body.job-booking-page .job_cancel {
+  text-align: right;
+  font-size: 12px;
+  position: relative;
+  top: -1em;
+}
+body.job-booking-page #job_questions {
+  margin-left: 0;
+}
+body.job-booking-page #job_questions li {
+  list-style: none;
+  font-size: 13px;
+  margin: 0;
+  padding-bottom: 5px;
+}
+body.job-booking-page #job_questions li .question {
+  font-weight: bold;
+}
+body.job-booking-page #job_questions li .answer {
+  font-style: italic;
+}
+#popup_success_message .social_icon {
+  float: left;
+  margin-right: 0.5em;
+}
+#popup_success_message .popup-close {
+  display: block;
+  padding-top: 1em;
+}

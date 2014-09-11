@@ -1,0 +1,20 @@
+@import "../../../shared/base";
+
+// Provider badge
+
+.badge-control {
+
+	background: @white;
+	#gradient > .vertical (@white, @grayLighter);
+	.box-shadow(0 1px 2px @grayLight); 
+	.border-radius(3px);
+	border: 1px solid @grayLighter;
+	padding: 1em;
+	position:relative;
+	height:130px;
+
+	.name { font-weight:bold; padding-bottom:0.5em; }
+	.rating, .location { padding-bottom:0.5em; }
+	.location { color:@quietColor; }
+
+}

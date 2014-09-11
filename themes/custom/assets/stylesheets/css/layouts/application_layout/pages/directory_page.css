@@ -1,0 +1,75 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.no-border-radius {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.no-box-shadow {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.no-background-image {
+  background-image: none;
+}
+.reset {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  line-height: normal;
+  list-style: none;
+}
+body.directory-page .breadcrumb li:last-child i {
+  display: none;
+}
+body.directory-page .business_name {
+  padding: 0.5em 0;
+}
+body.directory-page .provider_list .provider {
+  margin-bottom: 1em;
+}
+body.directory-page #popup_request input,
+body.directory-page #popup_request textarea {
+  margin-bottom: 1em;
+}
+body.directory-page #popup_request section.description textarea {
+  height: 120px;
+}
+body.directory-page .controls {
+  *zoom: 1;
+}
+body.directory-page .controls:before,
+body.directory-page .controls:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+body.directory-page .controls:after {
+  clear: both;
+}

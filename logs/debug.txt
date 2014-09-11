@@ -1,0 +1,83 @@
+[2014-09-06 03:46:25] Array
+(
+)
+
+[2014-09-06 03:48:56] Array
+(
+)
+
+[2014-09-06 03:53:33] Array
+(
+)
+
+[2014-09-07 01:52:16] Array
+(
+)
+
+[2014-09-08 01:21:25] Array
+(
+    [bt_challenge] => ea3fa643b04eff2708eb
+)
+
+[2014-09-08 01:24:34] Array
+(
+    [bt_challenge] => 70118214bc9ef98b1fe8
+)
+
+[2014-09-08 01:28:35] Array
+(
+)
+
+[2014-09-08 01:41:03] Array
+(
+    [name] => admin
+    [bt_challenge] => hjgyutyt677
+)
+
+[2014-09-08 01:41:06] Array
+(
+    [name] => admin
+    [bt_challenge] => hjgyutyt677
+)
+
+[2014-09-08 01:41:19] Array
+(
+    [bt_challenge] => c2e3808b72fafece49f4
+)
+
+[2014-09-08 01:41:46] Array
+(
+    [name] => admin
+    [bt_challenge] => hjgyutyt677
+)
+
+[2014-09-08 01:41:53] Array
+(
+    [name] => admin
+    [bt_challenge] => hjgyutyt677
+)
+
+[2014-09-08 01:42:30] Array
+(
+    [bt_challenge] => bf76d08d704b03911a9a
+)
+
+[2014-09-08 01:45:51] Array
+(
+    [name] => admin
+    [bt_challenge] => hjgyutyt677
+)
+
+[2014-09-08 01:46:04] Array
+(
+    [bt_challenge] => 5c2d1cf97b2aae4bf04f
+)
+
+[2014-09-08 01:49:46] Array
+(
+)
+
+[2014-09-08 01:51:43] Array
+(
+)
+

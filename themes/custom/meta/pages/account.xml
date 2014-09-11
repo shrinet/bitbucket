@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Page</class>
+        <file_name>account</file_name>
+        <name>Account</name>
+        <url>/account</url>
+        <title>My Account</title>
+        <description>null</description>
+        <keywords>null</keywords>
+        <sort_order>null</sort_order>
+        <published>1</published>
+        <action_code>bluebell:account</action_code>
+        <security_id>users</security_id>
+        <unique_id>4f792ee75c2481.67961677</unique_id>
+        <relation_template>4f670f15565f26.27069914</relation_template>
+        <relation_security_redirect>4f70511904b848.15165327</relation_security_redirect>
+    </object>
+</data>

@@ -1,0 +1,92 @@
+@import "../../../shared/base";
+
+body.job-page {
+
+	.job-details .detail { font-weight:bold; font-size: 12px; }
+	.job-description .summary { padding-bottom:1em; }
+
+	.well {
+		p { font-size: 13px; }
+	}
+
+	#p_quote_onsite {
+		div.price_column {
+			input { width:75%; display:inline-block; margin:0 0.2em; }
+			.divider { position:absolute; margin:3px 0px 0px 12px; }
+		}
+
+		.row { padding:0.5em 0; }
+	}
+
+	#p_quote_flat_rate {
+
+		.labor_table, .item_table {
+			th { font-size: 12px; }
+			width:100%;
+			td { padding-bottom:0; }
+			td.price {
+				input { width:75px; }
+				.currency { position:absolute; margin:3px 0px 0px -10px; }
+			}
+			td.line_item {
+				width:76%;
+				textarea { height:50px; }
+			}
+		}
+
+		.add_line_item { position:relative; top:-1em; }
+		#link_add_line_item { background: url('../../../../../images/icons/add.png') no-repeat; padding-left: 20px; }
+
+		.total_cost {
+			ul, li { @include reset; }
+			ul { overflow:hidden; }
+			li { width:50%; display:block; height:auto; float:left; }
+			span.total_cost_label, span.total_cost_value { display:block; border:1px solid @grayLighter; padding:0.5em 0; line-height:20px; }
+			.total_cost_value { font-weight:bold; }
+		}
+	}
+
+	#p_personal_message_flat, #p_personal_message_onsite {
+		textarea { height:120px; }
+		select, .custom.dropdown { display:inline-block; }
+		.message_parting { padding:0.5em 0; }
+		.final_comment { height:200px; }
+	}
+
+	.final_note { padding:20px 20px 0 20px; margin:0 20px; }
+
+	#p_ask_question {
+		#job_questions {
+			margin-left:0;
+			li { 
+				list-style: none;
+				font-size: 13px;
+				margin:0; padding-bottom:5px; 
+				.question { font-weight:bold; }
+				.answer { font-style:italic; }
+			}
+		}
+		textarea { height:75px; }
+	}
+
+	#p_quote_panel {
+		.tabs-content { background:@white; }
+
+		table.quote_summary {
+			margin-top: 1em; width:100%;
+			th { font-size: 12px; }
+			td.price, th.price { width:150px; }
+		}
+		.quote_title { 
+			margin-bottom: 1em;
+		}        
+	}
+
+	.job_ignore {
+		text-align: right;
+		font-size: 12px;
+		position:relative;
+		top:-1em;
+	}    
+
+}

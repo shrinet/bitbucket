@@ -1,0 +1,84 @@
+
+// Block Grid
+//--------------------------------------------------
+
+.block-grid { 
+	display: block; 
+	padding: 0; 
+	.clearfix;
+
+	> li { 
+		.box-sizing(border-box);
+		margin: 0;
+		display: block; 
+		height: auto; 
+		float: left; 
+	}
+	&.grid-span1 { margin: 0; 
+		> li { width: 100%; padding: 0 0 15px; }
+	}
+	&.grid-span2 { margin: 0 -15px; 
+		> li { width: 50%; padding: 0 15px 15px; }
+		> li:nth-child(2n+1) { clear: both; }
+	}
+	&.grid-span3 { margin: 0 -12px; 
+		> li { width: 33.33333%; padding: 0 12px 12px; }
+		> li:nth-child(3n+1) { clear: both; }
+	}
+	&.grid-span4 { margin: 0 -10px; 
+		> li { width: 25%; padding: 0 10px 10px; }
+		> li:nth-child(4n+1) { clear: both; }
+	}
+	&.grid-span5 { margin: 0 -8px; 
+		> li { width: 20%; padding: 0 8px 8px; }
+		> li:nth-child(5n+1) { clear: both; }
+	}
+	&.grid-span6 { margin: 0 -8px; 
+		> li { width: 16.66667%; padding: 0 8px 8px; }
+		> li:nth-child(6n+1) { clear: both; }
+	}
+	&.grid-span7 { margin: 0 -8px; 
+		> li { width: 14.28571%; padding: 0 8px 8px; }
+		> li:nth-child(7n+1) { clear: both; }
+	}
+	&.grid-span8 { margin: 0 -8px; 
+		> li { width: 12.5%; padding: 0 8px 8px; }
+		> li:nth-child(8n+1) { clear: both; }
+	}
+	&.grid-span9 { margin: 0 -8px; 
+		> li { width: 11.11111%; padding: 0 8px 8px; }
+		> li:nth-child(9n+1) { clear: both; }
+	}
+	&.grid-span10 { margin: 0 -8px; 
+		> li { width: 10%; padding: 0 8px 8px; }
+		> li:nth-child(10n+1) { clear: both; }
+	}
+	&.grid-span11 { margin: 0 -8px; 
+		> li { width: 9.09091%; padding: 0 8px 8px; }
+		> li:nth-child(11n+1) { clear: both; }
+	}
+	&.grid-span12 { margin: 0 -8px; 
+		> li { width: 8.33333%; padding: 0 8px 8px; }
+		> li:nth-child(12n+1) { clear: both; }
+	}
+}
+
+
+// Separators
+//--------------------------------------------------
+
+.separator {
+	&.bottom {
+		padding-bottom: 15px;
+		margin-bottom:15px; 
+		border-bottom:2px dashed @borderColor;
+		&.shadow { border-bottom:none; .box-shadow(15px 0 15px -15px @gray); }
+	}
+	&.right {
+		float: none;        
+		padding-right: @gridGutterWidth;
+		border-right:2px dashed @borderColor;
+		background:transparent;
+		&.shadow { border-right:none; .box-shadow(15px 0 15px -15px @gray); margin-right: 15px; }
+	}
+}

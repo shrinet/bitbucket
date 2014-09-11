@@ -1,0 +1,29 @@
+@import "../../../shared/base";
+
+body.messages-page {
+
+	.main-controls {
+		padding-top:1em;
+		.button { padding-left:0.5em; padding-right:0.5em; }
+	}
+
+	.all-messages {
+		.message {        	
+			.message-link { cursor:pointer; 
+				&:hover .from { color:@linkColorHover; }
+			}
+			padding:0.5em 1em;
+			border-bottom:1px solid @borderColor;
+			&.unread { background-color: @shadeColor; }
+			.recipient { font-weight:bold; padding-top:1em; padding-bottom:0.5em; color:@linkColor; }
+			.subject { font-size: 13px; color:@quietColor; padding-bottom:0.5em; }
+			.controls {             	
+				padding-top:2em; 
+				.date { color:@quietColor; font-size: 13px; }
+				span, a { margin-right: 0.5em; }
+				.link-delete { float:right; }
+			}
+		}
+	}
+
+}

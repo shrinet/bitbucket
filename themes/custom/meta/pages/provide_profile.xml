@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Page</class>
+        <file_name>provide_profile</file_name>
+        <name>Provide Profile</name>
+        <url>/provide/profile</url>
+        <title>null</title>
+        <description>null</description>
+        <keywords>null</keywords>
+        <sort_order>null</sort_order>
+        <published>1</published>
+        <action_code>Custom</action_code>
+        <security_id>null</security_id>
+        <unique_id>4f8d5860546a70.30611473</unique_id>
+        <relation_template>4f670f15565f26.27069914</relation_template>
+    </object>
+</data>

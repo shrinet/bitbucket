@@ -1,0 +1,18 @@
+@import "../../../shared/base";
+
+body.message-page {
+
+	.message {
+		border-bottom:1px solid @borderColor;
+		.date, .username { padding-top:1em; }
+		.date { color:@quietColor; font-size: 13px; text-align: right; }
+		.username { font-weight:bold; padding-bottom:0.5em; color:@quietColor; }
+		.message_content { padding-bottom:1em; }
+	}
+
+	#form_message_reply {
+		fieldset { padding-bottom:1em; }
+		textarea { min-height:100px; height:100px; resize:none; }
+	}
+
+}

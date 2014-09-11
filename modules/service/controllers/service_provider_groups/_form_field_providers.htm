@@ -1,0 +1,20 @@
+<div id="provider_list" class="clear">
+	<? $this->display_partial('provider_list') ?>
+</div>
+
+<script type="text/javascript">
+	function updateProviderList() {
+		cancelPopup();
+		
+		$('provider_list').phpr().post('on_update_provider_list', {
+			update: '#provider_list',
+			loadIndicator: {
+				show: true,
+				element: '#provider_list',
+				hideOnSuccess: true,
+				src: '<?=Phpr::$config->get('PHPR_URL', 'phpr')?>/assets/images/loading_30.gif'
+			},
+			afterUpdate: make_providers_sortable
+		}).send();
+	}
+</script>

@@ -1,0 +1,3 @@
+<?=$this->css_include(array(
+	'@/assets/stylesheets/css/layouts/payment_layout/pages/payment_pay_page.css',
+)) ?>

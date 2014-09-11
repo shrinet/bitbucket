@@ -1,0 +1,10 @@
+<?
+    $hidden_fields = $payment_type->get_hidden_fields($payment_type, $invoice);
+?>
+<p><?=__('Click the button below to pay using Skrill')?></p>
+<form action="<?=$payment_type->get_form_action($payment_type) ?>" method="post">
+    <? foreach ($hidden_fields as $name=>$value): ?>
+        <input type="hidden" name="<?=$name?>" value="<?=$value?>"/>
+    <? endforeach ?>
+    <input type="submit" class="btn" value="<?= __('Pay with Skrill') ?>" />
+</form>

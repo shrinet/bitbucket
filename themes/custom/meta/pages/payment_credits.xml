@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Page</class>
+        <file_name>payment_credits</file_name>
+        <name>Credits</name>
+        <url>/payment/credits</url>
+        <title>Purchase Credits</title>
+        <description>null</description>
+        <keywords>null</keywords>
+        <sort_order>null</sort_order>
+        <published>1</published>
+        <action_code>payment:credits</action_code>
+        <security_id>everyone</security_id>
+        <unique_id>5038a9bfdfd847.95633586</unique_id>
+        <relation_template>4f670f15565f26.27069914</relation_template>
+        <relation_parent>5024bfdf61e221.05869600</relation_parent>
+    </object>
+</data>

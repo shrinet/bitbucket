@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Content_Block</class>
+        <file_name>page_privacy_content</file_name>
+        <name>Privacy page content</name>
+        <code>page_privacy_content</code>
+        <relation_page>4f7942db0ea568.73803073</relation_page>
+        <type>html</type>
+    </object>
+</data>

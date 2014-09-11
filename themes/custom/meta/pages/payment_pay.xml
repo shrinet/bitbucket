@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Page</class>
+        <file_name>payment_pay</file_name>
+        <name>Pay</name>
+        <url>/payment/pay</url>
+        <title>Submit Payment</title>
+        <description>null</description>
+        <keywords>null</keywords>
+        <sort_order>null</sort_order>
+        <published>1</published>
+        <action_code>payment:pay</action_code>
+        <security_id>everyone</security_id>
+        <unique_id>5024bfdf61e221.05869600</unique_id>
+        <relation_template>4f670f15565f26.27069914</relation_template>
+    </object>
+</data>

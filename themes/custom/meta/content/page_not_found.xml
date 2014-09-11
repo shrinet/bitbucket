@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Content_Block</class>
+        <file_name>page_not_found</file_name>
+        <name>Page not found</name>
+        <code>page_not_found</code>
+    </object>
+</data>

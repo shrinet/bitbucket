@@ -1,0 +1,19 @@
+<? Admin_Breadcrumb::add('Invoice Statuses', 'payment/invoice_statuses')->add($this->app_page_title);?>
+<? Phpr_View::begin_block("view") ?>
+
+	<?=flash()?>
+
+	<? if (!isset($fatal_error)): ?>
+		<div class="form-450">
+			<?=Phpr_Form::open_tag() ?>
+				<? $this->form_render() ?>
+
+				<?=admin_ajax_button('Save', 'create_on_save', array()) ?>
+				<?=admin_ajax_button('Cancel', 'create_on_cancel') ?>
+				<div class="clear"></div>
+			</form>
+		</div>
+	<? else: ?>
+	<p><a href="<?= url('payment/invoice_statuses') ?>">Return to the status list</a></p>
+	<? endif ?>
+<? Phpr_View::end_block() ?>

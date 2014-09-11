@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Content_Block</class>
+        <file_name>quality_providers</file_name>
+        <name>Quality Providers</name>
+        <code>quality_providers</code>
+        <relation_page>4f7442b10df7d4.55925886</relation_page>
+    </object>
+</data>

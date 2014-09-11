@@ -1,0 +1,27 @@
+<?
+	$custom_form_fields = Bluebell_Request::get_custom_form_fields($form_model);
+?>
+<? if ($custom_form_fields): ?>
+
+	<? foreach ($custom_form_fields as $field): ?>
+		<?
+			$field_name = 'custom_field_' . $field->code;
+		?>
+		<div class="control-group textarea full preview" id="form_field_<?= $field_name ?>Service_Request">
+			<label class="control-label" for="Service_Request_<?= $field_name ?>">
+				<?= h($field->label) ?> 
+			</label>
+
+			<div class="controls preview" id="form_field_container_<?= $field_name ?>Service_Request">
+				<div class="preview-field text">
+					
+					<span class="uneditable-input">
+						<?= h($field->current_value) ?>
+					</span>
+					
+				</div>
+			</div>
+		</div>
+	<? endforeach ?>
+
+<? endif ?>

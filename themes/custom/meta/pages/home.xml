@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Page</class>
+        <file_name>home</file_name>
+        <name>Home</name>
+        <url>/</url>
+        <title>null</title>
+        <description>null</description>
+        <keywords>null</keywords>
+        <sort_order>null</sort_order>
+        <published>1</published>
+        <action_code>bluebell:home</action_code>
+        <security_id>everyone</security_id>
+        <unique_id>4f670ded115c69.70706303</unique_id>
+        <relation_template>4f68669a4ac537.45254800</relation_template>
+    </object>
+</data>

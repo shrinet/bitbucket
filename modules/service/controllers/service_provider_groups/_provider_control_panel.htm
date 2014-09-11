@@ -1,0 +1,22 @@
+<ul class="nav">
+	<li><?=cp_button('Add Providers to group', 'plus', array('href'=>'#', 'onclick'=>"new PopupForm('on_load_add_provider_form', {closeByEsc: false, ajaxFields: $(this).getForm()}); return false;")) ?></li>
+	<li>
+		<?=cp_button('Remove selected', 'remove', array('href'=>'#', 'onclick'=>"return $('#provider_list').phpr().post('on_remove_selected_providers', {
+			update: '#provider_list',
+			loadIndicator: {
+				show: true,
+				element: '#provider_list',
+				hideOnSuccess: true
+			},
+			confirm: 'Do you really want to remove providers from the group?',
+			afterUpdate: make_providers_sortable,
+			beforeSend: function(){ 
+				if (jQuery('#provider_list').find('input.list_cb:checked').length == 0) {
+					alert('Please select provider(s) to remove.');
+					return false;
+				}
+				return true;
+			}
+		}).send()")) ?>
+	</li>
+</ul>

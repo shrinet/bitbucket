@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Page</class>
+        <file_name>provide_testimonial</file_name>
+        <name>Provide Testimonial</name>
+        <url>/provide/testimonial</url>
+        <title>null</title>
+        <description>null</description>
+        <keywords>null</keywords>
+        <sort_order>null</sort_order>
+        <published>1</published>
+        <action_code>service:testimonial</action_code>
+        <security_id>everyone</security_id>
+        <unique_id>4faa0825e26539.15034291</unique_id>
+        <relation_template>4f670f15565f26.27069914</relation_template>
+        <relation_parent>4f794284837740.63490800</relation_parent>
+    </object>
+</data>

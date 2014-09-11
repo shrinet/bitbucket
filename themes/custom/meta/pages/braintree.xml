@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Page</class>
+        <file_name>braintree</file_name>
+        <name>braintree</name>
+        <url>/braintree</url>
+        <title>null</title>
+        <description>null</description>
+        <keywords>null</keywords>
+        <sort_order>null</sort_order>
+        <published>1</published>
+        <action_code>payment:braintree_response</action_code>
+        <security_id>everyone</security_id>
+        <unique_id>540a58892586b9.74051873</unique_id>
+        <relation_template>540a57df9b93d1.23793046</relation_template>
+    </object>
+</data>

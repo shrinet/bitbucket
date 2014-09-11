@@ -1,0 +1,34 @@
+<? Admin_Breadcrumb::add('Settings', 'admin/settings')->add('Notification Templates', 'notify/templates')->add($this->app_page_title);?>
+<? Phpr_View::begin_block("view") ?>
+
+	<?=flash()?>
+
+	<? if (!isset($fatal_error)): ?>
+		<div class="scoreboard-report">
+			<ul>
+				<li>
+					<p>Template</p>
+					<h3><?=h($form_model->code) ?></h3>
+				</li>
+			</ul>
+		</div>
+
+		<?=form_open()?>
+
+			<? $this->form_render() ?>
+
+			<div id="fixed-toolbar" class="top">
+				<div class="form-toolbar">
+					<?= admin_ajax_button('Save', 'edit_on_save', array('class'=>'btn-success'), "beforeSend: function(){phprTriggerSave();}") ?>
+					<?= admin_ajax_button('Send test message', 'on_test', array('class'=>'btn-primary'), "confirm: 'Test message will attempt to send using the details found on your staff account. Continue?', loadIndicator: {hideOnSuccess: true}, hideErrorOnSuccess: false, update: '#form-flash', beforeSend: function(){phprTriggerSave();}"); ?>
+					<?= admin_ajax_button('Cancel', 'edit_on_cancel') ?>
+					<?= admin_ajax_button('Delete', 'edit_on_delete', array('class'=>"btn-danger pull-right"), "confirm: 'Do you really want to delete this template?'") ?>
+				</div>
+			</div>
+
+		<?=form_close()?>
+
+	<? else: ?>
+		<p><a href="<?= url('notify/templates') ?>">Return to the notification list</a></p>
+	<? endif ?>
+<? Phpr_View::end_block() ?>

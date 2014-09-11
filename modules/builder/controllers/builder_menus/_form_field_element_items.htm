@@ -1,0 +1,25 @@
+<div class="navbar scroll-toolbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<? foreach ($this->get_item_types() as $info): ?>
+				<?
+					$description = $info->get_description();
+					$name = $info->get_name();
+				?>
+				<li><?= cp_button(h($name), 'plus', array('title'=>$description, 'class'=>'has-tooltip', 'href'=>'javascript:;', 'onclick'=>"new PopupForm('on_load_item_form', {ajaxFields: { 'menu_item_class_name': '".get_class($info)."' }  }); return false;")) ?></li>
+			<? endforeach ?>
+		</ul>
+	</div>
+</div>
+
+
+<div class="alert">
+	<p><strong>Hint!</strong> Drag and drop the menu items below to sort or nest them.</p>
+</div>
+
+<div id="item_list" class="clear relative">
+	<? $this->display_partial('item_list', array(
+		'session_key'=>$this->form_get_edit_session_key(),
+		'menu'=>$form_model,
+	)) ?>
+</div>

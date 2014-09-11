@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<data>
+    <object>
+        <class>Cms_Content_Block</class>
+        <file_name>how_it_works_pros</file_name>
+        <name>How it Works Pros</name>
+        <code>how_it_works_pros</code>
+        <type>html</type>
+        <relation_page>53e13ef38ace49.08043057</relation_page>
+    </object>
+</data>

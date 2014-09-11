@@ -1,0 +1,134 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.no-border-radius {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.no-box-shadow {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.no-background-image {
+  background-image: none;
+}
+.reset {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  line-height: normal;
+  list-style: none;
+}
+body.dashboard-page h3 {
+  margin-bottom: 1em;
+}
+body.dashboard-page .welcome-section .content {
+  padding-top: 2.5em;
+}
+body.dashboard-page .welcome-section .content label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  padding-top: 0.3em;
+}
+body.dashboard-page .welcome-section .content .small {
+  font-size: 13px;
+}
+body.dashboard-page #p_dash_welcome .welcome_icons {
+  margin-bottom: 0;
+  text-align: center;
+}
+body.dashboard-page #p_dash_welcome .welcome_icons .link-button {
+  text-align: center;
+  vertical-align: top;
+}
+body.dashboard-page #p_dash_welcome i {
+  margin: 0px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0px;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  font-size: 30px;
+}
+body.dashboard-page #p_dash_welcome a:hover {
+  text-decoration: none;
+}
+body.dashboard-page #p_dash_welcome a:hover i.icon {
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+body.dashboard-page #p_dash_welcome .box-content {
+  padding: 0.5em;
+}
+body.dashboard-page #p_dash_welcome .avatar {
+  text-align: center;
+}
+body.dashboard-page #p_dash_welcome .business_name {
+  padding-left: 0.5em;
+}
+body.dashboard-page #p_dash_welcome .business_name p {
+  margin: 0;
+}
+body.dashboard-page #p_dash_welcome .business_name p.name {
+  margin-top: .5em;
+  font-size: 16px;
+}
+body.dashboard-page #p_dash_welcome .business_name p.title {
+  margin-bottom: .5em;
+}
+body.dashboard-page #p_dash_welcome .business_name p.location {
+  margin: 0;
+}
+body.dashboard-page #p_offers .request_max_bids,
+body.dashboard-page #p_requests .request_max_bids {
+  text-align: right;
+}
+body.dashboard-page #p_offers .block-grid,
+body.dashboard-page #p_requests .block-grid {
+  margin-bottom: 0;
+}
+body.dashboard-page #p_offers .box-content,
+body.dashboard-page #p_requests .box-content {
+  padding-bottom: 1.5em;
+}
+body.dashboard-page #p_offers .box-footer,
+body.dashboard-page #p_requests .box-footer {
+  padding-top: 0.2em;
+  padding-bottom: 0.4em;
+}
+body.dashboard-page #p_offers .box-footer a,
+body.dashboard-page #p_requests .box-footer a {
+  font-size: 11px;
+  color: #666666;
+}
+body.dashboard-page #p_offers .box-footer a:hover,
+body.dashboard-page #p_requests .box-footer a:hover {
+  color: #20608e;
+}

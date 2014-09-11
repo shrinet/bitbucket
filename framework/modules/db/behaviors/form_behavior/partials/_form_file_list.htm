@@ -1,0 +1,30 @@
+<?
+	$list_container_id = $this->form_get_element_id('form_attachments_container_'.get_class($form_model).'_'.$db_name); 
+	$base_url = $form_field->file_download_base_url ? $form_field->file_download_base_url : '/admin/files/get/';
+	// $base_url = root_url('uploaded/public');
+?>
+
+<? if ($form_file_list->count): ?>
+	<div class="file-list">
+		<ul>
+			<? foreach ($form_file_list as $file): ?>
+				<li>
+					<a href="<?=$base_url.$file->id.'/'.urlencode($file->name) ?>" target="_blank" class="file-link">
+						<i class="icon-save"></i> <?=h($file->name) ?>
+					</a> 
+					<span class="file-size">(<?=File::size_from_bytes($file->size) ?>)</span> | 
+					<a href="javascript:;" class="file-delete" onclick="return $(this).phpr().post('<?=$this->get_event_handler('on_delete_file') ?>', {
+							data: { db_name: '<?=$db_name ?>', file_id: '<?=$file->id ?>' }, 
+							confirm: 'Do you really want to delete this file?', 
+							update: '#<?=$list_container_id ?>', 
+							loadIndicator: { show: false }
+						}).send();">
+						Delete
+					</a>
+				</li>
+			<? endforeach ?>
+		</ul>
+	</div>
+<? else: ?>
+	<p class="muted">There are no files uploaded</p>
+<? endif ?>

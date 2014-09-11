@@ -1,0 +1,30 @@
+<p>A provider from {site_name} has sent you a quote for your request.</p>
+<table style="font-family: arial,sans-serif; font-size: 12px; color: #404040; line-height: 1.5;" cellpadding="15">
+<tbody>
+<tr>
+<td valign="top" width="100">Provider:</td>
+<td valign="top">
+<h4>{provider_business_name}</h4>
+</td>
+</tr>
+<tr>
+<td valign="top">Quote:</td>
+<td valign="top">
+<h4>{quote_price}</h4>
+</td>
+</tr>
+<tr>
+<td valign="top">Start Time:</td>
+<td valign="top">{quote_start_at}</td>
+</tr>
+<tr>
+<td valign="top">Note:</td>
+<td valign="top">{quote_comment}</td>
+</tr>
+</tbody>
+</table>
+<p>
+To reply to this quote, follow the link below:<br />
+<strong>{request_title}</strong><br />
+{request_link}
+</p>

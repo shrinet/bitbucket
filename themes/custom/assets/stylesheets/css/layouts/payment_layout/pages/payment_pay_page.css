@@ -1,0 +1,145 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.no-border-radius {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.no-box-shadow {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.no-background-image {
+  background-image: none;
+}
+.reset {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  line-height: normal;
+  list-style: none;
+}
+body.payment-pay-page .table-invoice,
+body.payment-invoice-page .table-invoice {
+  width: 100%;
+}
+body.payment-pay-page .table-invoice .numeric,
+body.payment-invoice-page .table-invoice .numeric {
+  text-align: right;
+}
+body.payment-pay-page .table-invoice .grand-total td,
+body.payment-invoice-page .table-invoice .grand-total td {
+  font-size: 19px;
+  border-top: 3px solid #dddddd;
+}
+body.payment-pay-page .table-invoice .item-description,
+body.payment-invoice-page .table-invoice .item-description {
+  width: 60%;
+}
+body.payment-pay-page .table-invoice .blank,
+body.payment-invoice-page .table-invoice .blank {
+  border: none !important;
+}
+body.payment-pay-page #form_invoice_details .form-field,
+body.payment-invoice-page #form_invoice_details .form-field {
+  min-height: 32px;
+}
+body.payment-pay-page #form_invoice_details .form-field input,
+body.payment-invoice-page #form_invoice_details .form-field input {
+  margin: 0;
+}
+body.payment-pay-page #form_invoice_details .form-field label,
+body.payment-invoice-page #form_invoice_details .form-field label {
+  margin: 0;
+  padding: 0.4em 0.2em;
+  color: #6f6f6f;
+}
+body.payment-pay-page #form_invoice_details .form-field label:hover,
+body.payment-invoice-page #form_invoice_details .form-field label:hover {
+  background-color: #ffffdd;
+}
+body.payment-pay-page #form_invoice_details .form-field label.populated,
+body.payment-invoice-page #form_invoice_details .form-field label.populated {
+  color: #333333;
+}
+body.payment-pay-page #form_invoice_details .form-field.name label,
+body.payment-invoice-page #form_invoice_details .form-field.name label {
+  font-weight: bold;
+  font-size: 17px;
+}
+body.payment-pay-page #form_invoice_details .form-field.mobile,
+body.payment-invoice-page #form_invoice_details .form-field.mobile {
+  position: relative;
+  top: -5px;
+}
+body.payment-pay-page #form_invoice_details .form-field.address .row,
+body.payment-invoice-page #form_invoice_details .form-field.address .row {
+  padding: 0.5em 0 0 0;
+}
+body.payment-pay-page #form_invoice_details .form-field.address .populated,
+body.payment-invoice-page #form_invoice_details .form-field.address .populated {
+  line-height: 1.6;
+}
+
+#p_payment_form {
+	width: 600px;
+	background: #EEE;
+	box-shadow: 0px 0px 10px #999;
+	padding: 20px;
+}
+
+ul.braintreeForm {
+	width:600px;
+	margin:0px;
+	padding:0px;
+}
+
+.braintreeForm li {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	display:inline-block;
+}
+
+.braintreeForm li input[type=text], .braintreeForm li select {
+	width:100%;
+}
+
+.braintreeForm .fName, .braintreeForm .lName, .braintreeForm .expMonth, .braintreeForm .expYear {
+	width:233px;
+	margin-bottom:15px;
+}
+
+.braintreeForm .fName, .braintreeForm .expMonth {
+	margin-right:30px;
+}
+
+.braintreeForm .cNumber, .braintreeForm .cvv {
+	width:500px;
+}
