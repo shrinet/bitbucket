@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<data>
-    <object>
-        <class>Cms_Partial</class>
-        <file_name>account;details</file_name>
-        <name>account:details</name>
-    </object>
-</data>

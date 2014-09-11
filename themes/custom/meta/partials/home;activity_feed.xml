@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<data>
-    <object>
-        <class>Cms_Partial</class>
-        <file_name>home;activity_feed</file_name>
-        <name>home:activity_feed</name>
-    </object>
-</data>

@@ -1,1 +1,0 @@
-alter table user_messages modify column thread_id varchar(40);

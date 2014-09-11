@@ -1,2 +1,0 @@
-<h3>It looks like we don't have any providers in your area at the moment</h3>
-<p>Not to worry, we are dedicating to finding someone for you! So fill out the form to the right and tell us what you are looking for...</p>

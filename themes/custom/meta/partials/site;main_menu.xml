@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<data>
-    <object>
-        <class>Cms_Partial</class>
-        <file_name>site;main_menu</file_name>
-        <name>site:main_menu</name>
-    </object>
-</data>

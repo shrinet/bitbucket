@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<data>
-    <object>
-        <class>Cms_Content_Block</class>
-        <file_name>directory_not_found</file_name>
-        <name>Directory no providers found</name>
-        <code>directory_not_found</code>
-    </object>
-</data>
